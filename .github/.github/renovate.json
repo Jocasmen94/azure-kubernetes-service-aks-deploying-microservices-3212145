@@ -1,0 +1,30 @@
+{
+  "extends": ["config:base"],
+  "autodiscover": false,
+  "baseBranches": ["feat/renovate-test"],
+  "includePaths": [
+    "deployments/",
+    "helm/",
+    "docker/"
+  ],
+  "packageRules": [
+    {
+      "matchManagers": ["dockerfile"],
+      "groupName": "Docker image updates",
+      "enabled": true
+    },
+    {
+      "matchManagers": ["kubernetes"],
+      "groupName": "Kubernetes manifest updates",
+      "enabled": true
+    },
+    {
+      "matchManagers": ["helm-values", "helm-chart"],
+      "groupName": "Helm chart updates",
+      "enabled": true
+    }
+  ],
+  "prHourlyLimit": 2,
+  "prConcurrentLimit": 5,
+  "labels": ["dependencies", "renovate-bot"]
+}
