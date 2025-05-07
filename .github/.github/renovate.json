@@ -19,9 +19,13 @@
       "enabled": true
     },
     {
-      "matchManagers": ["helm-values", "helm-chart"],
+      "matchManagers": ["helm-chart", "helm-values"],
       "groupName": "Helm chart updates",
       "enabled": true
+    },
+    {
+      "matchManagers": ["npm", "yarn", "maven", "gradle", "pip", "composer", "nuget"],
+      "enabled": false
     }
   ],
   "prHourlyLimit": 2,
