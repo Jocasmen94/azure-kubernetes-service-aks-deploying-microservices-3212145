@@ -2,6 +2,7 @@
   "extends": ["config:base"],
   "autodiscover": false,
   "baseBranches": ["feat/renovate-test"],
+  "prBaseBranch": "feat/renovate-test",
   "includePaths": [
     "deployments/",
     "helm/",
